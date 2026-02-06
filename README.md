@@ -20,6 +20,11 @@ Wget the raw package:
 
 ```
 wget https://github.com/flaneurette/Linux-Located/raw/refs/heads/main/located-1.0.deb
+```
+
+Install it:
+
+```
 sudo dpkg -i located-1.0.deb
 ```
 
