@@ -8,6 +8,8 @@ Pronounced: *Locate Dee* or: `/loʊˈkeɪt ˈdiː/`
 
 <img src="https://raw.githubusercontent.com/flaneurette/Linux-Located/refs/heads/main/src/locateD.png">
 
+<img src="https://raw.githubusercontent.com/flaneurette/Linux-Located/refs/heads/main/src/locateD.png">
+
 ### Features
 
 * Lists configuration files in `/etc` with line numbers and color highlighting
