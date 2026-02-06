@@ -87,7 +87,7 @@ located -q .ext    # Filter by extension, e.g., .yaml, .json, .git
 export COLOR="\e[38;5;208m"  # orange
 ```
 
-* Change line number color:
+* Change line number color: 
 
 ```bash
 NUMCOLOR="\e[38;5;82m"  # green
