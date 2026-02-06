@@ -1,8 +1,8 @@
-# Linux Locate - fast config file finder & editor
+# Linux Located - fast config file finder & editor
 
-Linux Locate: a bash service that lets you find configs quickly.
+Linux Located: a bash service that lets you find configs quickly.
 
-`locate` is a simple, color-coded bash script to quickly find and edit configuration files on Linux systems. It saves time hunting through `/etc` and other system directories, supporting multiple formats, priority configs, multi-column display, and extension filtering.
+`located` is a simple, color-coded bash script to quickly find and edit configuration files on Linux systems. It saves time hunting through `/etc` and other system directories, supporting multiple formats, priority configs, multi-column display, and extension filtering.
 
 ### Features
 
@@ -10,8 +10,8 @@ Linux Locate: a bash service that lets you find configs quickly.
 * Multi-column display for easy viewing
 * Priority list for frequently used configs (Postfix, Apache, Fail2Ban, etc.)
 * Supports common config extensions: `.conf`, `.ini`, `.cf`, `.local`, `.cnf`, `.yaml`, `.yml`, `.json`, `.env`, `.rules`, `.list`, `.service`, `.socket`, `.timer`
-* Filter by extension: `locate -q .ext` (e.g., `locate -q .git`)
-* Full list mode: `locate -all`
+* Filter by extension: `located -q .ext` (e.g., `located -q .git`)
+* Full list mode: `located -all`
 * Opens selected config in `$EDITOR` (defaults to `nano`)
 
 ### Installation
