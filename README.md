@@ -79,7 +79,7 @@ located -q .ext    # Filter by extension, e.g., .yaml, .json, .git
 1. Select a number from the list to open the file in your editor.
 2. Default editor is `$EDITOR`, fallback is `nano`.
 
-### Customization
+### Customization 
 
 * Change colors by setting the `COLOR` environment variable:
 
