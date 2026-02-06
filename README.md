@@ -32,7 +32,7 @@ Install it:
 sudo dpkg -i located-1.0.deb
 ```
  
-Manpage:
+Manpage: 
 ```
 man located
 ```
