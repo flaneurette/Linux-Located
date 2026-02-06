@@ -44,7 +44,7 @@ located            # Show prioritized config files
 located -all       # Show all config files found in /etc
 located -q .ext    # Filter by extension, e.g., .yaml, .json, .git
 ```
-
+ 
 ### Manual installation
 
 
