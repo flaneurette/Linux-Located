@@ -28,7 +28,7 @@ located -firewall 		 # shows/edits `iptables -L -n -v` (easy to forget, so short
 located -firewall6 		 # shows/edits `ip6tables -L -n -v` (easy to forget, so shortcut: -firewall6)
 ```
 
-Vhosts management
+Vhosts management (very difficult to memorize all sites/configs/ssl etc)
 
 ```
 located -vhosts          # Apache/Nginx virtual host configs
