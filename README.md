@@ -6,18 +6,6 @@ Pronounced: *Locate Dee* or: `/loʊˈkeɪt ˈdiː/`
 
 `located` is a simple linux program to quickly find and edit configuration files on Linux systems. It saves time hunting through `/etc` and other system directories, supporting multiple formats, priority configs, multi-column display, and extension filtering.
 
-<img src="https://raw.githubusercontent.com/flaneurette/Linux-Located/refs/heads/main/src/Locate-Dee.png">
-
-### Features
- 
-* Lists configuration files in `/etc`
-* Multi-column display for easy viewing
-* Priority list for frequently used configs (Postfix, Apache, Fail2Ban, etc.)
-* Supports common config extensions: `.conf`, `.ini`, `.cf`, `.local`, `.cnf`, `.yaml`, `.yml`, `.json`, `.env`, `.rules`, `.list`, `.service`, `.socket`, `.timer`
-* Filter by extension: `located -q .ext` (e.g., `located -q .git`)
-* Full list mode: `located -all`
-* Opens selected config in `$EDITOR` (defaults to `nano`, you can change it to anything you like).
-
 ### Quick Installation
 
 ```
@@ -33,6 +21,18 @@ located            # Show prioritized config files
 located -all       # Show all config files found in /etc
 located -q .ext    # Filter by extension, e.g., .yaml, .json, .git
 ```
+
+<img src="https://raw.githubusercontent.com/flaneurette/Linux-Located/refs/heads/main/src/Locate-Dee.png">
+
+### Features
+ 
+* Lists configuration files in `/etc`
+* Multi-column display for easy viewing
+* Priority list for frequently used configs (Postfix, Apache, Fail2Ban, etc.)
+* Supports common config extensions: `.conf`, `.ini`, `.cf`, `.local`, `.cnf`, `.yaml`, `.yml`, `.json`, `.env`, `.rules`, `.list`, `.service`, `.socket`, `.timer`
+* Filter by extension: `located -q .ext` (e.g., `located -q .git`)
+* Full list mode: `located -all`
+* Opens selected config in `$EDITOR` (defaults to `nano`, you can change it to anything you like).
 
 ### Manual Installation
 
