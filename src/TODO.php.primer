@@ -1,0 +1,166 @@
+Example implementation for `located php -v`
+
+```bash
+show_php_version() {
+    echo -e "${COLOR}PHP Version Information:${RESET}\n"
+    
+    # 1. CLI Version (easy)
+    if command -v php >/dev/null 2>&1; then
+        CLI_VER=$(php -r "echo PHP_VERSION;")
+        echo -e "  ${NUMCOLOR}CLI Version:${RESET}      $CLI_VER"
+    else
+        echo -e "  ${NUMCOLOR}CLI Version:${RESET}      Not installed"
+    fi
+    
+    # 2. FPM Version (check all installed FPM versions)
+    FPM_FOUND=false
+    for fpm in /usr/sbin/php-fpm*; do
+        if [[ -x "$fpm" ]]; then
+            FPM_VER=$($fpm -v 2>/dev/null | head -1 | grep -oP '\d+\.\d+\.\d+')
+            echo -e "  ${NUMCOLOR}FPM Version:${RESET}      $FPM_VER ($(basename $fpm))"
+            FPM_FOUND=true
+        fi
+    done
+    [[ "$FPM_FOUND" == false ]] && echo -e "  ${NUMCOLOR}FPM Version:${RESET}      Not installed"
+    
+    # 3. Running Version (from active PHP-FPM process)
+    if systemctl is-active --quiet php*-fpm 2>/dev/null; then
+        RUNNING_SERVICE=$(systemctl list-units --type=service --state=running | grep -oP 'php[\d\.]+-fpm' | head -1)
+        if [[ -n "$RUNNING_SERVICE" ]]; then
+            RUNNING_VER=$(echo "$RUNNING_SERVICE" | grep -oP '\d+\.\d+')
+            echo -e "  ${NUMCOLOR}Running (FPM):${RESET}    PHP $RUNNING_VER (via $RUNNING_SERVICE)"
+        fi
+    else
+        echo -e "  ${NUMCOLOR}Running (FPM):${RESET}    Not running"
+    fi
+    
+    # 4. Apache Module Version (if mod_php is loaded)
+    if command -v apache2 >/dev/null 2>&1; then
+        MOD_PHP=$(apache2ctl -M 2>/dev/null | grep -oP 'php\d+_module')
+        if [[ -n "$MOD_PHP" ]]; then
+            MOD_VER=$(echo "$MOD_PHP" | grep -oP '\d+')
+            echo -e "  ${NUMCOLOR}Apache Module:${RESET}    PHP ${MOD_VER:0:1}.${MOD_VER:1} (mod_php)"
+        fi
+    fi
+    
+    echo ""
+    
+    # 5. Configuration File
+    INI_FILE=$(php -r "echo php_ini_loaded_file();")
+    echo -e "  ${NUMCOLOR}Config File:${RESET}      $INI_FILE"
+    
+    # 6. Additional INI files
+    EXTRA_INI=$(php -r "echo php_ini_scanned_dir();")
+    if [[ -n "$EXTRA_INI" ]] && [[ "$EXTRA_INI" != "false" ]]; then
+        echo -e "  ${NUMCOLOR}Extra INI Dir:${RESET}    $EXTRA_INI"
+    fi
+    
+    echo ""
+    
+    # 7. Key Settings (the ones people always check in phpinfo)
+    echo -e "  ${NUMCOLOR}Memory Limit:${RESET}     $(php -r "echo ini_get('memory_limit');")"
+    echo -e "  ${NUMCOLOR}Upload Max:${RESET}       $(php -r "echo ini_get('upload_max_filesize');")"
+    echo -e "  ${NUMCOLOR}Post Max:${RESET}         $(php -r "echo ini_get('post_max_size');")"
+    echo -e "  ${NUMCOLOR}Max Exec Time:${RESET}    $(php -r "echo ini_get('max_execution_time');")s"
+    echo -e "  ${NUMCOLOR}Max Input Time:${RESET}   $(php -r "echo ini_get('max_input_time');")s"
+    
+    echo ""
+    
+    # 8. Critical Extensions (the common ones people check)
+    echo -e "  ${NUMCOLOR}Loaded Extensions:${RESET}"
+    CRITICAL_EXTS=("mysqli" "pdo_mysql" "pdo_pgsql" "gd" "curl" "mbstring" "xml" "zip" "openssl" "json" "fileinfo")
+    LOADED_EXTS=$(php -m)
+    
+    for ext in "${CRITICAL_EXTS[@]}"; do
+        if echo "$LOADED_EXTS" | grep -qi "^$ext$"; then
+            echo -e "    ${GREEN}${RESET} $ext"
+        fi
+    done
+    
+    # 9. Count total extensions
+    TOTAL_EXTS=$(php -m | grep -v "^\[" | wc -l)
+    echo -e "\n  ${NUMCOLOR}Total Extensions:${RESET} $TOTAL_EXTS loaded"
+    
+    # 10. Show all extensions if requested
+    read -p "Show all $TOTAL_EXTS extensions? (y/N): " show_all
+    if [[ "$show_all" =~ ^[Yy]$ ]]; then
+        echo ""
+        php -m | grep -v "^\[" | column -c 80
+    fi
+}
+```
+
+## Example Output
+
+```bash
+$ located php -v
+
+PHP Version Information:
+
+  CLI Version:      8.1.2
+  FPM Version:      8.1.2 (php-fpm8.1)
+  Running (FPM):    PHP 8.1 (via php8.1-fpm)
+  Apache Module:    PHP 8.1 (mod_php)
+
+  Config File:      /etc/php/8.1/cli/php.ini
+  Extra INI Dir:    /etc/php/8.1/cli/conf.d
+
+  Memory Limit:     128M
+  Upload Max:       2M
+  Post Max:         8M
+  Max Exec Time:    30s
+  Max Input Time:   60s
+
+  Loaded Extensions:
+     mysqli
+     pdo_mysql
+     gd
+     curl
+     mbstring
+     xml
+     zip
+     openssl
+     json
+     fileinfo
+
+  Total Extensions: 47 loaded
+
+Show all 47 extensions? (y/N):
+```
+
+## Advanced Features
+
+### Compare CLI vs FPM settings
+```bash
+located php -v --compare
+
+  Setting              CLI        FPM
+  ─────────────────────────────────────
+  memory_limit         128M       512M
+  upload_max_filesize  2M         10M
+  post_max_size        8M         20M
+  max_execution_time   30         60
+```
+
+### Check specific extension
+```bash
+located php -v --ext imagick
+
+  Extension: imagick
+  Status:  Loaded
+  Version: 3.7.0
+  Config: /etc/php/8.1/mods-available/imagick.ini
+```
+
+### Show FPM pool settings
+```bash
+located php -v --pools
+
+  FPM Pools:
+  ─────────────────────────────────────
+  www (default)
+    PM: dynamic
+    Max Children: 5
+    Start Servers: 2
+    Socket: /run/php/php8.1-fpm.sock
+```
