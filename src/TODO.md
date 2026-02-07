@@ -50,10 +50,13 @@ located php -v
   Memory Limit:     128M
   Upload Max:       2M
   Post Max:         8M
-  
+```
+And:
+```
 located apache -v
-  Installed: Apache/2.4.52
-  Running:   Apache/2.4.52 (from systemctl status)
+  Installed: 		Apache/2.4.52
+  Running:   		Apache/2.4.52
+  Mods available: 	mod_proxy, mod_evasive, ...
 ```
 
 Firewall management
