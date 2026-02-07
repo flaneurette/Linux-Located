@@ -32,9 +32,7 @@ Vhosts management (very difficult to memorize all sites/configs/ssl etc if many 
 
 ```
 located -vhosts          # Apache/Nginx virtual host configs
-located -sites           # enabled sites
-located -sites-available # all available site configs
-located -sites-enabled   # just the active ones
+located -sites           # all sites configs
 ```
 
 Search on filesize, and open it.
