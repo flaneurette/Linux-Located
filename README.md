@@ -17,8 +17,24 @@ Pronounced: *Locate Dee* or: `/loʊˈkeɪt ˈdiː/`
 * Filter by extension: `located -q .ext` (e.g., `located -q .git`)
 * Full list mode: `located -all`
 * Opens selected config in `$EDITOR` (defaults to `nano`, you can change it to anything you like).
- 
-### Installation
+
+### Quick Installation
+
+```
+sudo add-apt-repository ppa:flaneurette/located
+sudo apt update
+sudo apt install located
+```
+
+Usage:
+
+```bash
+located            # Show prioritized config files
+located -all       # Show all config files found in /etc
+located -q .ext    # Filter by extension, e.g., .yaml, .json, .git
+```
+
+### Manual Installation
 
 Wget the raw package:
 
@@ -45,7 +61,7 @@ located -all       # Show all config files found in /etc
 located -q .ext    # Filter by extension, e.g., .yaml, .json, .git
 ```
  
-### Manual installation
+### Manual installation with config options
 
 
 1. Clone this repository:
