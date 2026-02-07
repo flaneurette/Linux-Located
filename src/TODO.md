@@ -22,7 +22,9 @@ Each mode could have its own priority list and search paths. Like: *located -log
 
 # Other ideas
 
-Versioning. (often it's `-v`, then `--version`, another has `-changelog` or `-version` etc, etc, rather inconsistent).
+Versioning. 
+
+Often it's `service -v`, then `--version`, another has `-changelog` or `-version` or `-V` or just: `version` etc, etc, rather inconsistent).
 
 > To make things worse: `PHP -v` gives `CLI` version, instead of `running PHP`.
 
