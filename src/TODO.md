@@ -62,8 +62,8 @@ located apache -v
 Firewall management
 
 ```
-located -firewall 		 # shows/edits `iptables -L -n -v` (easy to forget, so shortcut: -firewall)
-located -firewall6 		 # shows/edits `ip6tables -L -n -v` (easy to forget, so shortcut: -firewall6)
+located -firewall 		 # shows `iptables -L -n -v` (easy to forget, so shortcut: -firewall)
+located -firewall6 		 # shows `ip6tables -L -n -v` (easy to forget, so shortcut: -firewall6)
 
 located -firewall -drop 192.168.1.50       # Block IP
 located -firewall -drop 2001:db8::1        # Auto-detects IPv6
