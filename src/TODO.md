@@ -25,6 +25,7 @@ Firewall management
 
 ```
 located -firewall 		 # shows/edits `iptables -L -n -v` (easy to forget, so shortcut: -firewall)
+located -firewall6 		 # shows/edits `ip6tables -L -n -v` (easy to forget, so shortcut: -firewall6)
 ```
 
 ```
