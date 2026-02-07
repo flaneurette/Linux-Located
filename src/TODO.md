@@ -21,6 +21,12 @@ Each mode could have its own priority list and search paths. Like: *located -log
 
 # Other ideas
 
+Firewall management
+
+```
+located -firewall 		 # shows/edits `iptables -L -n -v`
+```
+
 ```
 located -vhosts          # Apache/Nginx virtual host configs
 located -sites           # enabled sites
