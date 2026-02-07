@@ -36,6 +36,19 @@ located postfix -v
 located all -v           # show versions of all installed services!
 ```
 
+Example of beautiful formatting:
+
+```
+located php -v
+  CLI:     PHP 8.1.2
+  FPM:     PHP 8.1.2  
+  Running: PHP 8.1.2 (via php-fpm8.1)
+  
+located apache -v
+  Installed: Apache/2.4.52
+  Running:   Apache/2.4.52 (from systemctl status)
+```
+
 Firewall management
 
 ```
