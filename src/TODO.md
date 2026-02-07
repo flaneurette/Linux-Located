@@ -61,6 +61,12 @@ Firewall management
 ```
 located -firewall 		 # shows/edits `iptables -L -n -v` (easy to forget, so shortcut: -firewall)
 located -firewall6 		 # shows/edits `ip6tables -L -n -v` (easy to forget, so shortcut: -firewall6)
+
+located -firewall -drop 192.168.1.50       # Block IP
+located -firewall -drop 2001:db8::1        # Auto-detects IPv6
+located -firewall -accept 10.0.0.5         # Whitelist IP to all ports
+located -firewall -accept 10.0.0.5 -p 22   # Whitelist IP to port 22
+located -firewall -remove 192.168.1.50     # undo a rule
 ```
 
 Vhosts management (very difficult to memorize all sites/configs/enabled/available/ssl etc if many vhosts)
