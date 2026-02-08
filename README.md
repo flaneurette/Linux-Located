@@ -1,6 +1,6 @@
 # Linux LCD - fast config file finder & editor
 
-Located: linux program that lets you find and edit configs quickly.
+Is a linux program that lets you find and edit configs quickly.
 
 Pronounced: *Locate D*, *LCD* or: `/loʊˈkeɪt ˈdiː/` 
 
@@ -17,6 +17,7 @@ sudo apt install located
 Usage:
 
 `located service -param`
+
 `lcd service -param`
 
 ```bash
