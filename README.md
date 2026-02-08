@@ -23,16 +23,6 @@ lcd -q .ext    # Filter by extension, e.g., .yaml, .json, .git
 ```
 
 <img src="https://raw.githubusercontent.com/flaneurette/LCD/refs/heads/main/src/images/Terminal.png">
-
-### Depends
-
-```
-Depends: findutils,
-	util-linux
-Suggests: systemd,
-	iptables
-Recommends: nano
-```
 	
 ### Features
  
@@ -98,6 +88,16 @@ You can add extensions freely.
 
 ```
 .conf, .ini, .cf, .local, .cnf, .config, .yaml, .yml, .json, .env, .rules, .list, .service, .socket, .timer
+```
+
+### Depends
+
+```
+Depends: findutils,
+	util-linux
+Suggests: systemd,
+	iptables
+Recommends: nano
 ```
 
 ### License
