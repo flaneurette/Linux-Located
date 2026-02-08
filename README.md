@@ -16,10 +16,6 @@ sudo apt install lcd
 
 Usage:
 
-`lcd service -param`
-
-Examples:
-
 ```bash
 lcd            # Show prioritized config files
 lcd -all       # Show all config files found in /etc
