@@ -39,7 +39,7 @@ lcd -q .ext    # Filter by extension, e.g., .yaml, .json, .git
 Wget the raw package:
 
 ```
-wget https://github.com/flaneurette/LCD/raw/refs/heads/main/lcd_1.0-0_all.deb
+wget https://github.com/flaneurette/LCD/raw/refs/heads/main/builds/lcd_1.0-0_all.deb
 ```
 
 Install it:
