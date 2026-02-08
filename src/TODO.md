@@ -13,11 +13,11 @@ modes/
 ```
 lcd -archive | -archives  	# .tar, .gz, .zip, .bz2, .xz, .7z
 lcd -logs    | -log 		# /var/log/* and other log locations
-lcd -error   | -errors 	# /var/log/error.log and all other error logs. (also scan all vhosts!)
+lcd -error   | -errors 	    # /var/log/error.log and all other error logs. (also scan all vhosts!)
 lcd -service | -services 	# systemd service files
 lcd -cron    | -crontabs 	# crontabs, /etc/cron.*
-lcd -cert    | -certs  	# SSL/TLS certificates (.pem, .crt, .key)
-lcd -backup  | -backups	# .bak, .old, backup dirs
+lcd -cert    | -certs  	    # SSL/TLS certificates (.pem, .crt, .key)
+lcd -backup  | -backups	    # .bak, .old, backup dirs
 lcd -journal -n 100 		# quick journalctl wrapper
 ```
 
@@ -33,10 +33,10 @@ Each mode could have its own priority list and search paths. Like: *lcd -logs* c
 
 # Other ideas
 
-Easy service management. No more `systemctl` / `service` which all have a different parameter order (confusing).
+Easy service management. No need for `systemctl` / `service` which all have a different parameter order (confusing).
 
 ```
-lcd apache -start             # also accepts apache2
+lcd apache -start   | -s      # also accepts apache2
 lcd apache -stop    | -quit
 lcd apache -restart | -reboot
 ```
