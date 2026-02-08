@@ -14,7 +14,7 @@ sudo apt install located
 
 Usage:
 
-`lcd service -param` Alias: `located service -param`
+`lcd service -param`
 
 Examples:
 
@@ -24,7 +24,7 @@ lcd -all       # Show all config files found in /etc
 lcd -q .ext    # Filter by extension, e.g., .yaml, .json, .git
 ```
 
-<img src="https://raw.githubusercontent.com/flaneurette/Linux-Located/refs/heads/main/src/Terminal.png">
+<img src="https://raw.githubusercontent.com/flaneurette/LCD/refs/heads/main/src/Terminal.png">
 
 ### Features
  
@@ -41,7 +41,7 @@ lcd -q .ext    # Filter by extension, e.g., .yaml, .json, .git
 Wget the raw package:
 
 ```
-wget https://github.com/flaneurette/Linux-Located/raw/refs/heads/main/located_1.1-2_all.deb
+wget https://github.com/flaneurette/LCD/raw/refs/heads/main/located_1.1-2_all.deb
 ```
 
 Install it:
