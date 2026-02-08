@@ -1,10 +1,8 @@
 # Located (LCD) - fast config file finder & editor
 
-Is a linux program that lets you find and edit configs quickly.
-
 Pronounced: *Locate D*, *LCD* or: `/loʊˈkeɪt ˈdiː/` 
 
-`located` is a simple linux program to quickly find and edit configuration files on Linux systems. It saves time hunting through `/etc` and other system directories, supporting multiple formats, priority configs, multi-column display, and extension filtering.
+It is a simple GNU-Linux program to quickly find and edit configuration files on Linux systems. It saves time hunting through `/etc` and other system directories, supporting multiple formats, priority configs, multi-column display, and extension filtering.
 
 ### Quick Installation
 
