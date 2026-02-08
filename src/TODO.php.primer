@@ -1,4 +1,4 @@
-Example implementation for `located php -v`
+Example implementation for `lcd php -v`
 
 ```bash
 show_php_version() {
@@ -93,7 +93,7 @@ show_php_version() {
 ## Example Output
 
 ```bash
-$ located php -v
+$ lcd php -v
 
 PHP Version Information:
 
@@ -132,7 +132,7 @@ Show all 47 extensions? (y/N):
 
 ### Compare CLI vs FPM settings
 ```bash
-located php -v --compare
+lcd php -v --compare
 
   Setting              CLI        FPM
   ─────────────────────────────────────
@@ -144,7 +144,7 @@ located php -v --compare
 
 ### Check specific extension
 ```bash
-located php -v --ext imagick
+lcd php -v --ext imagick
 
   Extension: imagick
   Status:  Loaded
@@ -154,7 +154,7 @@ located php -v --ext imagick
 
 ### Show FPM pool settings
 ```bash
-located php -v --pools
+lcd php -v --pools
 
   FPM Pools:
   ─────────────────────────────────────

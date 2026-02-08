@@ -533,7 +533,7 @@ show_nginx_version() {
 
 ```
 
-# Main located script
+# Main lcd script
 
 case "$1" in
     php)
@@ -575,7 +575,7 @@ esac
 ## Example Usage
 
 ```
-$ located apache -v
+$ lcd apache -v
 Apache Version Information:
 
   Installed:        Apache/2.4.52 (Ubuntu)
@@ -607,7 +607,7 @@ Apache Version Information:
 ```
 
 ```
-$ located all -v
+$ lcd all -v
 
 # Shows all services in one go!
 ```

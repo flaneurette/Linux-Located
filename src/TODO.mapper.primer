@@ -462,7 +462,7 @@ get_version_number() {
 # get_version_number "php"    # Returns: 8.1.2
 ```
 
-## Usage in `located`
+## Usage in `lcd`
 
 ```
 #!/bin/bash
@@ -473,8 +473,8 @@ get_version_number() {
 # Main command handler
 case "$1" in
     -v|--version)
-        # Show located's own version
-        echo "located version 1.0"
+        # Show lcd's own version
+        echo "lcd version 1.0"
         ;;
     
     *)
@@ -494,7 +494,7 @@ case "$1" in
                 echo -e "  ${GREEN}$VERSION${RESET}"
             fi
         else
-            # Regular located functionality (config file selection)
+            # Regular lcd functionality (config file selection)
             # ... existing code ...
         fi
         ;;
@@ -531,8 +531,8 @@ check_all_versions() {
     done
 }
 
-# Usage: located -v all
-# Or: located --check-versions
+# Usage: lcd -v all
+# Or: lcd --check-versions
 ```
 
 ## Testing the Function
