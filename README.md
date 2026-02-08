@@ -15,6 +15,9 @@ sudo apt install located
 Usage:
 
 `lcd service -param`
+
+Alias:
+
 `located service -param`
 
 ```bash
