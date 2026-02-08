@@ -1,15 +1,15 @@
 # LCD - fast config file finder & editor
 
-LCD: List > Choose > Do.
+**LCD: List > Choose > Do.**
 
 It is a simple GNU-Linux program to quickly find and edit configuration files on Linux systems. It saves time hunting through `/etc` and other system directories, supporting multiple formats, priority configs, multi-column display, and extension filtering.
 
 ### Quick Installation
 
 ```
-sudo add-apt-repository ppa:flaneurette/located
+sudo add-apt-repository ppa:flaneurette/lcd
 sudo apt update
-sudo apt install located
+sudo apt install lcd
 ```
 
 Usage:
