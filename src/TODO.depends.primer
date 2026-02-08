@@ -16,4 +16,5 @@ debian/control
 		util-linux
 	Suggests: systemd,
 		iptables
+	Recommends: nano
 ```
