@@ -21,9 +21,9 @@ modes/
 Configuration edit.
 
 ```
-# Editor
 lcd -config | -conf | -c            # Aliases
 -------------------------------------------------------------
+# Editor
 lcd -config -editor nano			# Alter lcd config editor
 lcd -config -editor vi				# Ibid
 lcd -config -editor vim				# Ibid
