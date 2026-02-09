@@ -9,13 +9,12 @@ modes/
   etc...
 ```
 
-~~Basic features~~
-
-~~```~~
-~~lcd            # Show prioritized config files~~
-~~lcd -all       # Show all config files found in /etc~~
-~~lcd -q .ext    # Filter by extension, e.g., .yaml, .json, .git~~
-~~```~~
+> ~~Basic features~~
+> ```
+> lcd            # Show prioritized config files
+> lcd -all       # Show all config files found in /etc
+> lcd -q .ext    # Filter by extension, e.g., .yaml, .json, .git
+> ```
 
 New features to come:
 
