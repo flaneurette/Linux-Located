@@ -64,7 +64,9 @@ lcd -home alice 		# prints all relevant files/scripts found in /home/alice/
 Easy service management. No need for `systemctl` / `service` which all have a different parameter order (confusing).
 
 ```
-lcd apache -start   | -s      # also accepts apache2
+lcd `service` -start -stop -restart
+---------------------------------------------------------
+lcd apache -start   | -s           # also accepts apache2
 lcd apache -stop    | -quit
 lcd apache -restart | -reboot
 ```
