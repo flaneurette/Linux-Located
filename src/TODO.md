@@ -9,6 +9,19 @@ modes/
   etc...
 ```
 
+Modes logic in lcd.sh
+
+```
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+source "$SCRIPT_DIR/modes/logs.sh"
+source "$SCRIPT_DIR/modes/certs.sh"
+source "$SCRIPT_DIR/modes/services.sh"
+# p.s. don't exit in sourced files, kills entire program.
+```
+
 ⭐ Reserved flags: `-v -start -stop -restart -s -quit -reboot`.
 
 > ~~Basic features~~ ✅ FINISHED.
