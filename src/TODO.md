@@ -9,7 +9,7 @@ modes/
   etc...
 ```
 
-> ~~Basic features~~ OK FINISHED.
+> ~~Basic features~~ ✅ FINISHED.
 > ```
 > lcd            # Show prioritized config files
 > lcd -all       # Show all config files found in /etc
