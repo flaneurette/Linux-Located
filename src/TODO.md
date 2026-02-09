@@ -148,7 +148,7 @@ lcd -size 50M-200M   # files between 50M and 200M
 We could combine it with the other modes too:
 
 ```
-lcd -logs -size +100M     # big log files eating disk space
-lcd -archive -size +1G    # large archives
-lcd -all -size +500M      # any large config/system files
+lcd -logs -size >100M     # big log files eating disk space
+lcd -archive -size >=1G    # large archives
+lcd -all -size >=500M      # any large config/system files
 ```
