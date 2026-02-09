@@ -63,7 +63,7 @@ lcd -update 			# Updates, upgrades and auto-removes stale packages.
 Explain.
 
 ```
-lcd -explain 			# explains the filesystem and prints it to the user.
+lcd -explain 			# explains the filesystem and prints it to the user. (Simply list everything in ~)
 ```
 
 Clean function.
