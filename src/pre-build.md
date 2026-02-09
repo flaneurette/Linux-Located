@@ -9,6 +9,14 @@ lcd-1.2/
 │   ├── certs.sh
 │   └── services.sh
 └── debian/
+│   ├── changelog
+│   ├── compat
+│   ├── control
+│   ├── copyright
+│   ├── files
+│   ├── install
+│   ├── links
+│   └── rules
 ```
 
 debian/install
