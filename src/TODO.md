@@ -141,11 +141,11 @@ lcd -archive -size >=1G    # large archives
 lcd -all -size >=500M      # any large config/system files
 ```
 
-⭐ Caveat: Early on, we have to scan for `-v` or `-start -stop -restart`. If found, we know the following section are requested.
+⭐ Caveat: Early on, we have to scan for `-v` or `-start -stop -restart -s -quit -reboot`. If found, we know the following section are requested.
 
 ```
 -v > inspect / explain
--start/-stop/-restart > mutate state
+-start -stop -restart -s -quit -reboot > mutate state
 ```
 
 Easy service management. No need for `systemctl` / `service` which all have a different parameter order (confusing).
