@@ -9,6 +9,8 @@ modes/
   etc...
 ```
 
+⭐ Reserved flags: `-v -start -stop -restart -s -quit -reboot`.
+
 > ~~Basic features~~ ✅ FINISHED.
 > ```
 > lcd            # Show prioritized config files
