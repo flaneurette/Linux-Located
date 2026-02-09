@@ -33,6 +33,27 @@ Each mode could have its own priority list and search paths. Like: *lcd -logs* c
 
 # Other ideas
 
+Alt dir scanning.
+
+```
+lcd -dir /boot			# Lists files in /boot
+lcd -directory /boot	# ibid
+```
+
+User dirs.
+
+```
+lcd -usr  | -user		# prints all files/scripts found in /usr/local/bin (must be user OR root!)
+lcd -root 				# prints all files/scripts found in /root (must be root!)
+```
+
+Home scan.
+
+```
+lcd -home admin 		# prints all relevant files/scripts found in /home/admin/ (must be user OR root!)
+lcd -home alice 		# prints all relevant files/scripts found in /home/alice/ (must be user OR root!)
+```
+
 Complete Linux update, upgrade and auto-clean.
 
 ```
@@ -57,27 +78,6 @@ Unlocker.
 
 ```
 lcd -unlock				# Removes apt/dpkg locks.
-```
-
-Alt dir scanning.
-
-```
-lcd -dir /boot			# Lists files in /boot
-lcd -directory /boot	# ibid
-```
-
-User dirs.
-
-```
-lcd -usr  | -user		# prints all files/scripts found in /usr/local/bin (must be user OR root!)
-lcd -root 				# prints all files/scripts found in /root (must be root!)
-```
-
-Home scan.
-
-```
-lcd -home admin 		# prints all relevant files/scripts found in /home/admin/ (must be user OR root!)
-lcd -home alice 		# prints all relevant files/scripts found in /home/alice/ (must be user OR root!)
 ```
 
 Easy service management. No need for `systemctl` / `service` which all have a different parameter order (confusing).
@@ -151,9 +151,9 @@ lcd -sites           # all sites configs
 Site management:
 
 ```
-lcd example.com
-lcd example.com -logs
-lcd example.com -cert
+lcd -site example.com
+lcd -site example.com -logs
+lcd -site example.com -cert
 ```
 
 Search on filesize.
