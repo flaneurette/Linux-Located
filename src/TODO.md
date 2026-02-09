@@ -69,9 +69,9 @@ lcd -explain 			# explains the filesystem and prints it to the user. (Simply lis
 Aliases.
 
 ```
-lcd -aliases   		    			# show all aliases from /etc/aliases
-lcd -alias webinfo:root@example.com	# save new alias to /etc/aliases
-lcd -alias root:/dev/null			# save new alias to /etc/aliases
+lcd -aliases   		    			# show all aliases from /etc/aliases (must be root)
+lcd -alias webinfo:root@example.com	# save new alias to /etc/aliases (must be root)
+lcd -alias root:/dev/null			# save new alias to /etc/aliases (must be root)
 ```
 
 Clean function.
