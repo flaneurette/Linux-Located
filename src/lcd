@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+LCD_SHARE_DIR="${LCD_SHARE_DIR:-/usr/share/lcd}"
+
+# Prefer installed path, fallback to dev tree
+MODES_DIR="$SCRIPT_DIR/modes"
+[[ -d "$LCD_SHARE_DIR/modes" ]] && MODES_DIR="$LCD_SHARE_DIR/modes"
+
+# Must come first.
+source "$MODES_DIR/validation.sh"
+# Load modes.
+source "$MODES_DIR/logs.sh"
+source "$MODES_DIR/certs.sh"
+source "$MODES_DIR/services.sh"
+
+# Config paths
+CONFIG_SYSTEM="/etc/lcd/lcd.conf"
+CONFIG_USER="${XDG_CONFIG_HOME:-$HOME/.config}/lcd/lcd.conf"
+
+# Load config (export vars)
+set -a
+[[ -r "$CONFIG_SYSTEM" ]] && source "$CONFIG_SYSTEM"
+[[ -r "$CONFIG_USER" ]] && source "$CONFIG_USER"
+set +a
