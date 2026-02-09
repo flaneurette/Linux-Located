@@ -50,7 +50,7 @@ lcd -directory /boot	# ibid
 User dirs.
 
 ```
-lcd -usr  | -user		# prints all files/scripts found in /usr/local/bin
+lcd -usr  | -user		# prints all files/scripts found in /usr/local/bin (must be user OR root!)
 lcd -root 				# prints all files/scripts found in /root (must be root!)
 ```
 
