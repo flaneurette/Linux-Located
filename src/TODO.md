@@ -18,7 +18,19 @@ modes/
 > lcd -q .ext    # Filter by extension, e.g., .yaml, .json, .git
 > ```
 
-New features to come:
+Configuration edit.
+
+```
+# Editor
+lcd -config -editor nano			# Alter lcd config editor
+lcd -config -editor vi				# Ibid
+lcd -config -editor vim				# Ibid
+
+# Colors
+lcd -config -colors green-orange    # Alter lcd config colors
+```
+
+Extra's:
 
 ```
 lcd -archive 		| -archives  	# .tar, .gz, .zip, .bz2, .xz, .7z
