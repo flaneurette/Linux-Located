@@ -13,7 +13,7 @@ Modes logic in lcd.sh
 
 ```
 #!/usr/bin/env bash
-# is NOT POSIX, but bash.
+# is NOT POSIX sh, but bash.
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 
