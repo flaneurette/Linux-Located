@@ -22,7 +22,7 @@ Configuration edit.
 
 ```
 # Editor
-lcd -config | -conf | -configuration# Aliases
+lcd -config | -conf | -c            # Aliases
 -------------------------------------------------------------
 lcd -config -editor nano			# Alter lcd config editor
 lcd -config -editor vi				# Ibid
